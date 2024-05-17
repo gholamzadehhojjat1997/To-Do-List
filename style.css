@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: Vazir;
+  src: url(./font/Vazir.ttf);
+}
+body {
+  height: 100vh;
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Vazir;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  width: 285px;
+  margin: 10px 0;
+  padding: 20px;
+  background-color: snow;
+}
+.editingBox {
+  display: flex;
+  flex-direction: row;
+}
+h3 {
+  font-size: 15px;
+  padding: 25px 0;
+  color: rgba(0, 0, 0, 0.8);
+}
+#text {
+  padding: 5px 15px;
+  margin: 0 5px 0;
+  height: 40px;
+  width: 175px;
+  outline: none;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 15px;
+  font-family: Vazir;
+}
+.addButton {
+  padding: 5px 15px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  height: 40px;
+  font-family: Vazir, sans-serif;
+}
+.addButton:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+}
+li {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: white;
+  width: 285px;
+  min-height: 60px;
+  padding: 15px;
+  margin: 5px 0;
+  font-size: 17.5px;
+  text-align: center;
+  list-style-type: none;
+  font-family: Vazir, sans-serif;
+  line-height: 30px;
+}
+.trash,
+.done {
+  float: left;
+  display: none;
+  font-size: 25px;
+}
+.done {
+  float: right;
+}
+li:hover .trash {
+  display: inline-block;
+}
+li:hover .done {
+  display: inline-block;
+}
+i:hover {
+  color: red;
+  cursor: pointer;
+}
+.taskSituation {
+  text-decoration: line-through;
+  background-color: rgba(0, 0, 0, 0.5);
+}
