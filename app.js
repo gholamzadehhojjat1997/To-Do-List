@@ -9,7 +9,8 @@ addButton.addEventListener("click", () => {
     let taskText = document.createTextNode(task.value);
     ul.appendChild(li);
     li.innerHTML += `<span class="trash"><i class="fa-solid fa-trash-can"></i></span>
-        <span class="done"><i class="fa-regular fa-square-check"></i></span>`;
+                      <span class="done"><i class="fa-regular fa-square-check"></i></span>
+                      <span class="edition"><i class="fa-solid fa-pen"></i></span>`;
     li.appendChild(taskText);
     task.value = "";
   }
@@ -19,5 +20,6 @@ ul.addEventListener("click", (event) => {
     event.target.parentElement.parentElement.style.display = "none";
   } else if (event.target.className === "fa-regular fa-square-check") {
     event.target.parentElement.parentElement.classList.toggle("taskSituation");
+    event.target.parentElement.previousElementSibling.classList.toggle("trashSituation");
   }
 });

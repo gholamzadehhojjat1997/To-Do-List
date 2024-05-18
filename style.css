@@ -30,6 +30,7 @@ body {
   margin: 10px 0;
   padding: 20px;
   background-color: snow;
+  border-radius: 10px;
 }
 .editingBox {
   display: flex;
@@ -40,7 +41,7 @@ h3 {
   padding: 25px 0;
   color: rgba(0, 0, 0, 0.8);
 }
-#text {
+#task {
   padding: 5px 15px;
   margin: 0 5px 0;
   height: 40px;
@@ -70,29 +71,34 @@ li {
   border: 1px solid rgba(0, 0, 0, 0.8);
   background-color: white;
   width: 285px;
-  min-height: 60px;
+  height: 75px;
   padding: 15px;
   margin: 5px 0;
   font-size: 17.5px;
   text-align: center;
   list-style-type: none;
   font-family: Vazir, sans-serif;
-  line-height: 30px;
+  border-radius: 10px;
+  overflow: auto;
+  line-height: 43px;
 }
-.trash,
-.done {
+.trash {
   float: left;
   display: none;
-  font-size: 25px;
+  font-size: 20px;
+  margin: 0 15px 0 10px;
 }
 .done {
   float: right;
+  display: inline;
+  font-size: 20px;
+  margin: 0 10px 0 5px;
 }
-li:hover .trash {
-  display: inline-block;
-}
-li:hover .done {
-  display: inline-block;
+.edition {
+  float: right;
+  display: inline;
+  font-size: 20px;
+  margin: 0 5px 0 15px;
 }
 i:hover {
   color: red;
@@ -101,4 +107,7 @@ i:hover {
 .taskSituation {
   text-decoration: line-through;
   background-color: rgba(0, 0, 0, 0.5);
+}
+.trashSituation {
+  display: inline;
 }
